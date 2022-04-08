@@ -30,6 +30,7 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-maven-
       - name: Build with Maven
+        timeout-minutes: 120
         run: ./mvnw clean install -B -U -Pspring -Dmaven.test.redirectTestOutputToFile=true
       - name: Publish Test Report
         uses: mikepenz/action-junit-report@v2
