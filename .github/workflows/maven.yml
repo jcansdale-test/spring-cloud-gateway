@@ -13,11 +13,9 @@ on:
 jobs:
   build:
 
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
 
     steps:
-      - run: curl -v -s https://repo.maven.apache.org/maven2/com/stoyanr/evictor/1.0.0/evictor-1.0.0.pom
-
       - uses: actions/checkout@v2
       - name: Set up JDK
         uses: actions/setup-java@v2
